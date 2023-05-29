@@ -1,0 +1,16 @@
+{
+    "work": [
+        {
+            "title": "Your Job Title",
+            "summary": "Brief summary of your job",
+            "details": "Details in markdown format"
+        }
+    ],
+    "education": [
+        {
+            "title": "Your Degree",
+            "summary": "Brief summary of your education",
+            "details": "Details in markdown format"
+        }
+    ]
+}
