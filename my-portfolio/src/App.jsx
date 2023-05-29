@@ -1,5 +1,3 @@
-// src/App.jsx
-
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
@@ -9,21 +7,26 @@ import ContactPage from './pages/ContactPage';
 import Navbar from './pages/Navbar';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="app">
-      <Router>
-        <Navbar />
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route path="/experience" component={ExperiencePage} />
-          <Route path="/projects" component={ProjectsPage} />
-          <Route path="/contact" component={ContactPage} />
-        </Switch>
-      </Router>
-    </div>
+    <Router forceRefresh={true}>
+      <Navbar />
+      <Switch>
+        <Route exact path="/">
+          <HomePage />
+        </Route>
+        <Route path="/experience">
+          <ExperiencePage />
+        </Route>
+        <Route path="/projects">
+          <ProjectsPage />
+        </Route>
+        <Route path="/contact">
+          <ContactPage />
+        </Route>
+      </Switch>
+    </Router>
   );
-}
+};
 
 export default App;
-
